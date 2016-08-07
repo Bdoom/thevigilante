@@ -84,10 +84,9 @@ public class PlayerData : MonoBehaviour {
                 bullet.GetComponent<BulletHitsAI>().BulletDamage = BulletDamage;
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 // velocity vs addForce?!??!!!!?!?!?!?!?
-                rb.AddForce(cam.transform.forward * BulletSpeed);
+                //rb.AddForce(cam.transform.forward * BulletSpeed);
                 
-
-                //rb.velocity = cam.transform.forward * BulletSpeed;
+                rb.velocity = cam.transform.forward * BulletSpeed;
                 Destroy(bullet, 5);
                 ammo--;
             }
@@ -98,10 +97,9 @@ public class PlayerData : MonoBehaviour {
                 bullet.GetComponent<BulletHitsAI>().BulletDamage = BulletDamage;
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 // velocity vs addForce?!??!!!!?!?!?!?!?
-                rb.AddForce(cam.transform.forward * BulletSpeed);
+                //rb.AddForce(cam.transform.forward * BulletSpeed);
                 
-
-                //rb.velocity = cam.transform.forward * BulletSpeed;
+                rb.velocity = cam.transform.forward * BulletSpeed;
                 Destroy(bullet, 5);
                 ammo--;
             }

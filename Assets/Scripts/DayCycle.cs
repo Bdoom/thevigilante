@@ -141,7 +141,7 @@ public class DayCycle : MonoBehaviour
 
                 enemySpawner.NumberOfEnemysToSpawn = 5;
                 pData.hasAutoFire = true;
-                pData.BulletSpeed = 1000;
+                pData.BulletSpeed = 100;
 
                 hud.DayUpdateText.enabled = true;
                 hud.DayUpdateText.text = "Welcome to day 10, five enemies will spawn every five seconds. Your weapon now has automatic fire (and faster bullet speed).  Try your best to survive. <color=white>Press <i><color=yellow>Space</color></i> to continue.</color>";
