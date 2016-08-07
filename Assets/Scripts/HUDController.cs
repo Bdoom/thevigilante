@@ -95,7 +95,6 @@ public class HUDController : MonoBehaviour
         {
             FPSCounter.enabled = !FPSCounter.enabled;
             DrawFPS = FPSCounter.enabled;
-
         }
         #endif
 
