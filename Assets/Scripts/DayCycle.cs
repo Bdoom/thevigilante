@@ -194,6 +194,7 @@ public class DayCycle : MonoBehaviour
             }
 
 
+
            // Debug.Log(timeFixed);
 
             hud.survivalTimer.text = timeFixed;

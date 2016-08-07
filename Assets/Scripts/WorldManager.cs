@@ -90,6 +90,8 @@ public class WorldManager : MonoBehaviour {
         {
             DayCycle dayCycle = GameObject.Find("Sun").GetComponent<DayCycle>();
             dayCycle.numberOfDays = 5;
+            dayCycle.hud.DayUpdateText.text = dayCycle.numberOfDays.ToString();
+
         }
     }
 

@@ -29,6 +29,12 @@ public class HUDController : MonoBehaviour
     public Text textInfrontOfTimer;
     public Text survivalTimer;
 
+    public Text FPSCounter;
+
+    private float deltaTime = 0.0f;
+    private float fps;
+
+    private bool DrawFPS;
 
     public void TakeDamage(float damage)
     {
@@ -58,6 +64,9 @@ public class HUDController : MonoBehaviour
 
     void Update()
     {
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        fps = 1.0f / deltaTime;
+
         if (currentAmmo != pData.ammo)
         {
             currentAmmo = pData.ammo;
@@ -72,6 +81,27 @@ public class HUDController : MonoBehaviour
         if (enemysKilledCount.text != enemysKilled.ToString())
         {
             enemysKilledCount.text = enemysKilled.ToString();
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.F) && Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            FPSCounter.enabled = !FPSCounter.enabled;
+            DrawFPS = FPSCounter.enabled;
+        }
+
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            FPSCounter.enabled = !FPSCounter.enabled;
+            DrawFPS = FPSCounter.enabled;
+
+        }
+        #endif
+
+        if (DrawFPS)
+        {
+            FPSCounter.text = "FPS: " + (int) fps;
         }
 
     }

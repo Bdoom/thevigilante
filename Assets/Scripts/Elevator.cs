@@ -5,10 +5,8 @@ using UnityEngine.UI;
 public class Elevator : MonoBehaviour
 {
 
-    private static GameObject weapon;
-
-    private static GameObject elevatorWhole;
-    private static Text elevatorDoorText;
+    private GameObject elevatorWhole;
+    private Text elevatorDoorText;
    
     private Vector3 topFloor;
     private Vector3 bottomFloor;
@@ -27,7 +25,7 @@ public class Elevator : MonoBehaviour
         elevatorWhole = GameObject.Find("Elevator");
         elevatorDoorText = GameObject.Find("ElevatorDoorText").GetComponent<Text>();
         
-        weapon = GameObject.Find("Weapon");
+        
         elevatorDoorText.enabled = false;
         elevatorSpeed = 3;
     }
@@ -71,7 +69,6 @@ public class Elevator : MonoBehaviour
         if (gameObject.name == "Inner_Elevator_Trigger")
         {
             elevatorDoorText.enabled = false;
-            weapon.SetActive(false);
 
             Debug.Log(elevatorWhole.transform.position + " top: " + topFloor);
 
@@ -102,7 +99,6 @@ public class Elevator : MonoBehaviour
         if (gameObject.name == "Top_Floor_Elevator_Trigger" && other.name == "Player")
         {
             elevatorDoorText.enabled = true;
-            weapon.SetActive(false);
 
             if (elevatorWhole.transform.position == bottomFloor)
             {
@@ -114,7 +110,6 @@ public class Elevator : MonoBehaviour
         if (gameObject.name == "Bottom_Floor_Elevator_Trigger" && other.name == "Player")
         {
             elevatorDoorText.enabled = true;
-            weapon.SetActive(false);
 
             if (elevatorWhole.transform.position == topFloor)
             {
@@ -130,13 +125,11 @@ public class Elevator : MonoBehaviour
         if (gameObject.name == "Top_Floor_Elevator_Trigger" && other.name == "Player")
         {
             elevatorDoorText.enabled = false;
-            weapon.SetActive(true);
         }
 
         if (gameObject.name == "Bottom_Floor_Elevator_Trigger" && other.name == "Player")
         {
             elevatorDoorText.enabled = false;
-            weapon.SetActive(true);
         }
 
     }
