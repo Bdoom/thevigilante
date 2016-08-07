@@ -10,7 +10,7 @@ public class HSController : MonoBehaviour
     public string highscoreURL = "http://riotplease.com/HiScores/display.php";
 
     public Text HiScores;
-    public Text name;
+    public Text PlayerName;
 
     public string Name;
 
@@ -30,7 +30,7 @@ public class HSController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Start") // Change this and add a Submit button when the player dies to submit their hiscore.
         {
-            Name = name.text;
+            Name = PlayerName.text;
         }
 
         if (SceneManager.GetActiveScene().name == "World")

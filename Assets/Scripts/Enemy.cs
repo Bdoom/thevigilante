@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
 {
 
     private Animator anim;
-    private AudioSource audioSource;
 
     private NavMeshAgent agent;
     public WorldManager world;
@@ -34,7 +33,6 @@ public class Enemy : MonoBehaviour
 
         hud = FindObjectOfType<HUDController>();
 
-        audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
 
         agent = GetComponent<NavMeshAgent>();
