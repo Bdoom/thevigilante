@@ -5,13 +5,10 @@ public class ReflectionProbes : MonoBehaviour
 {
 
     ReflectionProbe probe;
-    Vector3 lastPlayerPos;
-    GameObject player;
 
     void Start()
     {
         probe = GetComponent<ReflectionProbe>();
-        player = GameObject.Find("Player");
     }
 
     void Update()
