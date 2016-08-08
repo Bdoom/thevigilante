@@ -32,6 +32,8 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemies()
     {
+        float defaultRadius = 3.0f;
+        float radius = defaultRadius;
 
         for (int i = 0; i < NumberOfEnemysToSpawn; i++)
         {
@@ -58,15 +60,39 @@ public class EnemySpawner : MonoBehaviour
                 positionToSpawn = player.transform.position + player.transform.forward * randomAmountFromPosition;
             }
 
+            Vector3 navMeshPosition;
+            if (FindPointOnNavMesh(positionToSpawn, radius, out navMeshPosition))
+            {
+                GameObject spawnedNPC = Instantiate(npcToSpawn, positionToSpawn, Quaternion.identity) as GameObject;
 
-            GameObject spawnedNPC = Instantiate(npcToSpawn, positionToSpawn, Quaternion.identity) as GameObject;
 
+                spawnedNPC.transform.parent = GameObject.Find("Enemies").transform;
+                spawnedNPC.GetComponent<Enemy>().EnemyDamage = EnemyDamage;
 
-            spawnedNPC.transform.parent = GameObject.Find("Enemies").transform;
-            spawnedNPC.GetComponent<Enemy>().EnemyDamage = EnemyDamage;
-
-            EnemyCount++;
+                EnemyCount++;
+                radius = defaultRadius;
+            }
+            else
+            {
+                radius += 1.0f;
+                i--;
+            }
         }
+    }
+
+    bool FindPointOnNavMesh(Vector3 point, float samplingRadius, out Vector3 result)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(point, out hit, samplingRadius, NavMesh.AllAreas))
+            {
+                result = hit.position;
+                return true;
+            }
+        }
+        result = Vector3.zero;
+        return false;
     }
 
 }

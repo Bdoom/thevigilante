@@ -68,17 +68,21 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
+        
 
         if (playerPos != Player.transform.position) // Recalculate path if player moves
         {
-
-            agent.destination = Player.transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(transform.position, out hit, 0.05f, NavMesh.AllAreas))
+                agent.destination = Player.transform.position;
 
             playerPos = Player.transform.position;
         }
         if (timer >= 5) // or every 5 seconds.
         {
-            agent.destination = Player.transform.position;
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(transform.position, out hit, 0.05f, NavMesh.AllAreas))
+                agent.destination = Player.transform.position;
             timer = 0;
         }
 

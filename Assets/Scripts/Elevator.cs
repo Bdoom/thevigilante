@@ -70,7 +70,7 @@ public class Elevator : MonoBehaviour
         {
             elevatorDoorText.enabled = false;
 
-            Debug.Log(elevatorWhole.transform.position + " top: " + topFloor);
+            //Debug.Log(elevatorWhole.transform.position + " top: " + topFloor);
 
             if (elevatorWhole.transform.position == topFloor)
             {
