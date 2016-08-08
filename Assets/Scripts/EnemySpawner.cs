@@ -63,6 +63,7 @@ public class EnemySpawner : MonoBehaviour
             Vector3 navMeshPosition;
             if (FindPointOnNavMesh(positionToSpawn, radius, out navMeshPosition))
             {
+                positionToSpawn = navMeshPosition;
                 GameObject spawnedNPC = Instantiate(npcToSpawn, positionToSpawn, Quaternion.identity) as GameObject;
 
 
