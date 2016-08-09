@@ -12,9 +12,12 @@ public class NationalMall_Human : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private Camera cam;
 
     void Start()
     {
+
+        cam = Camera.main;
 
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -38,6 +41,9 @@ public class NationalMall_Human : MonoBehaviour
 
         if (AllowPathing)
         {
+            agent.Resume();
+
+
             if (agent.remainingDistance < 0.5f || agent.destination == transform.position)
             {
                 int randomDestination = Random.Range(0, waypoints.Length);
@@ -48,7 +54,7 @@ public class NationalMall_Human : MonoBehaviour
         }
         else
         {
-            agent.destination = transform.position;
+            agent.Stop();
             
             anim.SetBool("AllowPathing", false);
         }
@@ -69,7 +75,7 @@ public class NationalMall_Human : MonoBehaviour
             if (col.name == "Player")
             {
                 anim.SetLookAtWeight(1);
-                anim.SetLookAtPosition(col.transform.Find("Camera").position);
+                anim.SetLookAtPosition(cam.transform.position);
                 AllowPathing = false;
 
 
