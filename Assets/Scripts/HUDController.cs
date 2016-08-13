@@ -84,7 +84,7 @@ public class HUDController : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.F) && Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.F) && Input.GetKey(KeyCode.LeftControl))
         {
             FPSCounter.enabled = !FPSCounter.enabled;
             DrawFPS = FPSCounter.enabled;
