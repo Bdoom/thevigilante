@@ -24,7 +24,7 @@ public class HUDController : MonoBehaviour
     public Text monstersText;
     public Text monstersCount;
 
-    public Text DayUpdateText;
+    public Text DayUpdateText; // For the bottom of the screen where it says "Press Space to Continue"
 
     public Text textInfrontOfTimer;
     public Text survivalTimer;
@@ -35,6 +35,8 @@ public class HUDController : MonoBehaviour
     private float fps;
 
     private bool DrawFPS;
+
+    public Text DayText; // For the actual day in the top left hand corner of the screen.
 
     public void TakeDamage(float damage)
     {

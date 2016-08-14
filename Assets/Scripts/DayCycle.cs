@@ -40,11 +40,14 @@ public class DayCycle : MonoBehaviour
 
     public HumanSpawner humanSpawner;
 
+    private Light sunLight;
 
     public HUDController hud;
 
     void Start()
     {
+        sunLight = GetComponent<Light>();
+
         DayCycleInSeconds = DayCycleInMinutes * MINUTE;
 
         timeOfDay = 0;
@@ -78,9 +81,25 @@ public class DayCycle : MonoBehaviour
         }
     }
 
+    
+    /// <summary>
+    /// Determines whether or not it is day or night time in game.
+    /// </summary>
+    /// Returns <returns>true</returns> if it is night time, returns <returns>false</returns>otherwise.
+    public bool isNightTime()
+    {
+        if (timeOfDay >= DayCycleInSeconds / 2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     void Update()
     {
-
         if (numberOfDays >= 5)
         {
 
@@ -104,7 +123,7 @@ public class DayCycle : MonoBehaviour
             minutes = Mathf.FloorToInt(gameTime / 60F);
             seconds = Mathf.FloorToInt(gameTime - minutes * 60);
             timeFixed = string.Format("{0:0}:{1:00}", minutes, seconds);
-            
+
 
 
             if (enemySpawner.enabled == false) // do once.
@@ -132,7 +151,7 @@ public class DayCycle : MonoBehaviour
                 enemySpawner.NumberOfEnemysToSpawn = 2;
                 hud.DayUpdateText.enabled = true;
                 hud.DayUpdateText.text = "Welcome to day 6, enemies will become stronger with each passing day. This game is unwinnable. Try your best to survive. <color=white>Press <i><color=yellow>Space</color></i> to continue.</color>";
-               
+
             }
 
             if (numberOfDays == 10 && displayDayInfo)
@@ -146,7 +165,7 @@ public class DayCycle : MonoBehaviour
                 hud.DayUpdateText.enabled = true;
                 hud.DayUpdateText.text = "Welcome to day 10, five enemies will spawn every five seconds. Your weapon now has automatic fire (and faster bullet speed).  Try your best to survive. <color=white>Press <i><color=yellow>Space</color></i> to continue.</color>";
 
-                
+
 
 
             }
@@ -157,11 +176,11 @@ public class DayCycle : MonoBehaviour
 
 
                 SetEnemiesSpeed(3);
-                
+
                 hud.DayUpdateText.enabled = true;
                 hud.DayUpdateText.text = "Welcome to day 12. Enemies move faster now. Try your best to survive. <color=white>Press <i><color=yellow>Space</color></i> to continue.</color>";
 
-                
+
             }
 
 
@@ -172,12 +191,12 @@ public class DayCycle : MonoBehaviour
                 enemySpawner.NumberOfEnemysToSpawn = 6;
                 enemySpawner.EnemyDamage = 10;
                 pData.BulletDamage = 7;
-                
+
                 hud.DayUpdateText.enabled = true;
 
                 hud.DayUpdateText.text = "Welcome to day 13, six enemies will spawn every five seconds. Enemies now deal more damage, but so do you. They deal 10 damage and you deal 7 damage (originally 5).  Try your best to survive. <color=white>Press <i><color=yellow>Space</color></i> to continue.</color>";
 
-               
+
 
             }
 
@@ -193,9 +212,6 @@ public class DayCycle : MonoBehaviour
                 displayDayInfo = false;
             }
 
-
-
-           // Debug.Log(timeFixed);
 
             hud.survivalTimer.text = timeFixed;
 
@@ -220,24 +236,20 @@ public class DayCycle : MonoBehaviour
         {
             if (!stars.isPlaying)
                 stars.Play();
-
-         
-
-
+            sunLight.intensity = Mathf.MoveTowards(sunLight.intensity, 0, Time.deltaTime);
         }
         else
         {
             if (!stars.isStopped)
                 stars.Stop();
-
-        
+            sunLight.intensity = Mathf.MoveTowards(sunLight.intensity, 1f, Time.deltaTime);            
 
 
         }
 
-
-        //Debug.Log(timeOfDay);
     }
+
+
 
 
 }

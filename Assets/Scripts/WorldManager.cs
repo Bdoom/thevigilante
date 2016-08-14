@@ -90,7 +90,7 @@ public class WorldManager : MonoBehaviour {
         {
             DayCycle dayCycle = GameObject.Find("Sun").GetComponent<DayCycle>();
             dayCycle.numberOfDays = 5;
-            dayCycle.hud.DayUpdateText.text = dayCycle.numberOfDays.ToString();
+            dayCycle.hud.DayText.text = "Day: " + dayCycle.numberOfDays;
 
         }
     }
@@ -141,7 +141,7 @@ public class WorldManager : MonoBehaviour {
 
             LoadingBar.transform.localScale = new Vector3(scene.progress / 1, LoadingBar.transform.localScale.y, LoadingBar.transform.localScale.z);
 
-            Debug.Log(scene.progress);
+            Debug.Log(scene.progress + "% Loaded");
             yield return new WaitForEndOfFrame();
         }
 
