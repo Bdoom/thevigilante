@@ -1,74 +1,21 @@
 fileFormatVersion: 2
-guid: 3b79fdf90be05344fb78f48725b7bf85
-timeCreated: 1471119943
+guid: c7141eeebaffed747a08b1eecadab92d
+timeCreated: 1471138006
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cylinder
-    100002: pCube1
-    100004: pCube2
-    100006: pCube3
-    100008: pCube4
-    100010: pCube5
-    100012: //RootNode
-    100014: Sun
-    100016: Cube
-    100018: Cube.001
-    100020: Cube.002
-    100022: Cube.003
-    400000: Cylinder
-    400002: pCube1
-    400004: pCube2
-    400006: pCube3
-    400008: pCube4
-    400010: pCube5
-    400012: //RootNode
-    400014: Sun
-    400016: Cube
-    400018: Cube.001
-    400020: Cube.002
-    400022: Cube.003
-    2300000: Cylinder
-    2300002: pCube1
-    2300004: pCube2
-    2300006: pCube3
-    2300008: pCube4
-    2300010: pCube5
-    2300012: Cube
-    2300014: Cube.001
-    2300016: Cube.002
-    2300018: Cube.003
-    3300000: Cylinder
-    3300002: pCube1
-    3300004: pCube2
-    3300006: pCube3
-    3300008: pCube4
-    3300010: pCube5
-    3300012: Cube
-    3300014: Cube.001
-    3300016: Cube.002
-    3300018: Cube.003
-    4300000: Cylinder
-    4300002: pCube5
-    4300004: pCube4
-    4300006: pCube3
-    4300008: pCube2
-    4300010: pCube1
-    4300012: Cube.002
-    4300014: Cube.001
-    4300016: Cube
-    4300018: Cube.003
-    6400000: Cube
-    6400002: Cube.001
-    6400004: Cube.002
-    6400006: Cylinder
-    6400008: pCube1
-    6400010: pCube2
-    6400012: pCube3
-    6400014: pCube4
-    6400016: pCube5
-    6400018: Cube.003
+    100000: Camera
+    100002: Cube
+    100004: Lamp
+    100006: //RootNode
+    400000: Camera
+    400002: Cube
+    400004: Lamp
+    400006: //RootNode
+    2300000: Cube
+    3300000: Cube
+    4300000: Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -93,9 +40,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
