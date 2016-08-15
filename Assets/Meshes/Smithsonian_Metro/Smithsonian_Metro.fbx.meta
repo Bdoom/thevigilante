@@ -17,6 +17,7 @@ ModelImporter:
     100018: Cube.001
     100020: Cube.002
     100022: Cube.003
+    100024: Cube.004
     400000: Cylinder
     400002: pCube1
     400004: pCube2
@@ -29,6 +30,7 @@ ModelImporter:
     400018: Cube.001
     400020: Cube.002
     400022: Cube.003
+    400024: Cube.004
     2300000: Cylinder
     2300002: pCube1
     2300004: pCube2
@@ -39,6 +41,7 @@ ModelImporter:
     2300014: Cube.001
     2300016: Cube.002
     2300018: Cube.003
+    2300020: Cube.004
     3300000: Cylinder
     3300002: pCube1
     3300004: pCube2
@@ -49,6 +52,7 @@ ModelImporter:
     3300014: Cube.001
     3300016: Cube.002
     3300018: Cube.003
+    3300020: Cube.004
     4300000: Cylinder
     4300002: pCube5
     4300004: pCube4
@@ -59,6 +63,7 @@ ModelImporter:
     4300014: Cube.001
     4300016: Cube
     4300018: Cube.003
+    4300020: Cube.004
     6400000: Cube
     6400002: Cube.001
     6400004: Cube.002
@@ -69,6 +74,7 @@ ModelImporter:
     6400014: pCube4
     6400016: pCube5
     6400018: Cube.003
+    6400020: Cube.004
   materials:
     importMaterials: 1
     materialName: 0

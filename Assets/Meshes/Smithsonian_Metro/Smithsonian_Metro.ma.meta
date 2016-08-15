@@ -12,6 +12,12 @@ ModelImporter:
     100008: pCube3
     100010: pCube4
     100012: pCube5
+    100014: Cube
+    100016: Cube.001
+    100018: Cube.002
+    100020: Cube.003
+    100022: Cube.004
+    100024: Cylinder
     400000: pCube1
     400002: pCube2
     400004: //RootNode
@@ -19,30 +25,60 @@ ModelImporter:
     400008: pCube3
     400010: pCube4
     400012: pCube5
+    400014: Cube
+    400016: Cube.001
+    400018: Cube.002
+    400020: Cube.003
+    400022: Cube.004
+    400024: Cylinder
     2300000: pCube1
     2300002: pCube2
     2300004: pSphere1
     2300006: pCube3
     2300008: pCube4
     2300010: pCube5
+    2300012: Cube
+    2300014: Cube.001
+    2300016: Cube.002
+    2300018: Cube.003
+    2300020: Cube.004
+    2300022: Cylinder
     3300000: pCube1
     3300002: pCube2
     3300004: pSphere1
     3300006: pCube3
     3300008: pCube4
     3300010: pCube5
+    3300012: Cube
+    3300014: Cube.001
+    3300016: Cube.002
+    3300018: Cube.003
+    3300020: Cube.004
+    3300022: Cylinder
     4300000: pCube1
     4300002: pCube2
     4300004: pSphere1
     4300006: pCube3
     4300008: pCube4
     4300010: pCube5
+    4300012: Cube.004
+    4300014: Cube.003
+    4300016: Cube.002
+    4300018: Cube.001
+    4300020: Cube
+    4300022: Cylinder
     6400000: pCube1
     6400002: pCube2
     6400004: pSphere1
     6400006: pCube3
     6400008: pCube4
     6400010: pCube5
+    6400012: Cube
+    6400014: Cube.001
+    6400016: Cube.002
+    6400018: Cube.003
+    6400020: Cube.004
+    6400022: Cylinder
     9500000: //RootNode
   materials:
     importMaterials: 1
