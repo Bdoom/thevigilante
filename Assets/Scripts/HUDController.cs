@@ -31,8 +31,13 @@ public class HUDController : MonoBehaviour
 
     public Text FPSCounter;
 
-    private float deltaTime = 0.0f;
-    private float fps;
+    //private float deltaTime = 0.0f;
+    //private float fps;
+
+    private int frameCount = 0;
+    private float dt = 0.0f;
+    private float fps = 0.0f;
+    private float updateRate = 4.0f;
 
     private bool DrawFPS;
 
@@ -66,8 +71,17 @@ public class HUDController : MonoBehaviour
 
     void Update()
     {
-        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-        fps = 1.0f / deltaTime;
+        //deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        //fps = 1.0f / deltaTime;
+
+        frameCount++;
+        dt += Time.deltaTime;
+        if (dt > 1.0 / updateRate)
+        {
+            fps = frameCount / dt;
+            frameCount = 0;
+            dt -= 1.0f / updateRate;
+        }
 
         if (currentAmmo != pData.ammo)
         {

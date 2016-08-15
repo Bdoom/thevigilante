@@ -1,2 +1,34 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
+Cmd: compileCompute
+  api=4 insize=1768 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1768 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1768 outsize=1945 ok=1
+Cmd: preprocess
+  insize=3673 outsize=475 ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at (59): Output value 'vert' is not completely initialized\nCompiling Vertex program
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING
+  api=4 type=0 insize=3515 outsize=562 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3515 outsize=418 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=4 insize=3515 outsize=2950 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileCompute
+  api=4 insize=1768 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1768 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1770 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1769 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1769 outsize=1945 ok=1
+Cmd: compileCompute
+  api=4 insize=1770 outsize=1797 ok=1
+Cmd: compileCompute
+  api=4 insize=1770 outsize=1797 ok=1
+Cmd: compileCompute
+  api=4 insize=1770 outsize=1797 ok=1
